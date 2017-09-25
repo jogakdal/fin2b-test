@@ -1,0 +1,37 @@
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script>
+		$( document ).ready(function() {
+			$('#calc').click( function() {
+				$('#result').html('');
+	
+	          	$.ajax({
+					url: '/fibonacci',
+	              dataType: 'json',
+	              type: 'POST',
+	              data: {'number':$('#number').val()},
+	
+	              success: function(result) {
+						if ( result['result'] == true ) {
+	                 		$('#result').html('Fibonacci sequence to ' + $('#number').val() + ' is ' + result['calc-result']);
+	                  	}
+	                 	else {
+	                 		$('#result').html('Calculation Fibonacci sequence to ' + $('#number').val() + ' is failed: ' + result['reason']);
+	                  	}
+	              	}
+	          	});
+	      	});
+		});
+	</script>
+
+<div class="container-fluid">
+	<div class="row">
+		<p>숫자를 입력하세요...</p>
+	</div>
+	<div class="row">
+		<input type="text" id="number" maxlength="5" onKeypress="if(event.keyCode < 45 || event.keyCode > 57) event.returnValue=false;" style="IME-MODE:disabled;" />
+    	<input type="button" id="calc" value="Calculation" />
+	</div>
+	<div id="result" class="row">
+	</div>
+</div>

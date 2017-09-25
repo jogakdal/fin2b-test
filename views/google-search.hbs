@@ -1,0 +1,14 @@
+<div class="container-fluid">
+	<div class="row">
+		<p>검색할 keyword를 입력하세요...</p>
+	</div>
+	<div class="row">
+		<form action="/google-search" method="POST">
+			keyword: <input name="keyword" type="test" /><input type="submit" value="search" />
+		</form>
+	</div>
+</div>
+
+<div class="container-fluid">
+{{{search_result}}}	
+</div>
