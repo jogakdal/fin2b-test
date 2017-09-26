@@ -10,6 +10,11 @@ Install `nodemon` (optional)
 git clone https://github.com/jogakdal/fin2b-test
 cd fin2b-test
 ```
+### Install required package
+``` shell 
+npm install 
+```
+
 ### Build
 ``` shell 
 npm build 
@@ -17,7 +22,11 @@ npm build
 
 ### Run server
 ``` shell 
-node app.js 
+node app.js
+```
+or 
+``` shell 
+npm start
 ```
 You may execute by `nodemon` instead of `node`
 

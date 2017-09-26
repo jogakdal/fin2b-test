@@ -1,7 +1,6 @@
 var express = require('express');
 var passwordValidator = require('password-validator');
 var google = require('google')
-var request = require('request')
 
 var router = express.Router();
 
@@ -91,7 +90,6 @@ router.post('/fibonacci', function(req, res, next) {
 			calcResult[i] = calcResult[i-2] + calcResult[i-1]; 
 		}
 		
-		console.log(calcResult[value]); 
 		res.send({
 			result: true, 
 			"calc-result": calcResult[value]
