@@ -15,11 +15,6 @@ cd fin2b-test
 npm install 
 ```
 
-### Build
-``` shell 
-npm build 
-```
-
 ### Run server
 ``` shell 
 node app.js
